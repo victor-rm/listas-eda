@@ -12,22 +12,25 @@ public class Palindromo {
         System.out.println(palindromo(palavra));
     }
 
+    // Código revisado pelo gh
     public static boolean palindromo(char[] palavra) {
         boolean eh_palidromo = true;
-        for (int i = 0, j = palavra.length - 1; i < (palavra.length / 2) && j >= (palavra.length / 2) ; i++, j--) {
-            if (palavra[i] != palavra[j]) {
+
+        for (int i = 0; i < palavra.length / 2; i++) {
+            if (palavra[i] != palavra[palavra.length - 1 - i]) {
                 eh_palidromo = false;
             }
         }
+
         return eh_palidromo;
     }
 
     private static char[] converteStringEmChar(String[] entrada) {
         char[] retorno = new char[entrada.length];
         for (int i = 0; i < entrada.length; i++) {
-           retorno[i] = entrada[i].charAt(0);
+            retorno[i] = entrada[i].charAt(0);
         }
 
         return retorno;
-    }
+    } 
 }
