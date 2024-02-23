@@ -14,15 +14,15 @@ public class Palindromo {
 
     // Código revisado pelo gh
     public static boolean palindromo(char[] palavra) {
-        boolean eh_palidromo = true;
+        boolean ehPalidromo = true;
 
         for (int i = 0; i < palavra.length / 2; i++) {
             if (palavra[i] != palavra[palavra.length - 1 - i]) {
-                eh_palidromo = false;
+                ehPalidromo = false;
             }
         }
 
-        return eh_palidromo;
+        return ehPalidromo;
     }
 
     private static char[] converteStringEmChar(String[] entrada) {
